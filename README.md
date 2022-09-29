@@ -461,8 +461,7 @@ Contributions are what make the open source community such an amazing place to b
 
 ## License
 [MIT](https://github.com/nitin27may/mean-docker/blob/master/LICENSE/)
-  ## Contact
-  Nitin Singh - [@nitin27may](https://twitter.com/nitin27may) 
+ 
 
 <!-- Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
    -->
