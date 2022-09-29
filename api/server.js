@@ -20,18 +20,25 @@ console.log("secret", environment.secret);
 mongoose.connect(environment.mongodb.uri, {
   useUnifiedTopology: true,
   useNewUrlParser: true
-});
+})
+  .then(() => {
+    console.log("Successfully connected to the DB");
+  })
+  .catch((e) => {
+    console.log("Database error: ", e);
+  });
+
 mongoose.Promise = global.Promise;
 
-// On connection error
-mongoose.connection.on("error", (error) => {
-  console.log("Database error: ", error);
-});
+// // On connection error
+// mongoose.connection.on("error", (error) => {
+//   console.log("Database error: ", error);
+// });
 
-// On successful connection
-mongoose.connection.on("connected", () => {
-  console.log("Connected to database");
-});
+// // On successful connection
+// mongoose.connection.on("connected", () => {
+//   console.log("Connected to database");
+// });
 
 // addtional configuration when serving Angular SPA (static reource and Anugalr routing)
 const allowedExt = [
